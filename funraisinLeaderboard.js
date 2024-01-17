@@ -2,6 +2,7 @@
  * Author: Garfield Fan
  * Company: Funraisin
  * Date: 15Jan2024
+ * version: 1.1
  */
 class FunraisinLeaderboard {
   
