@@ -1,0 +1,38 @@
+.leaderboardrow:nth-child(2n) {background-color: #e8edf1;}
+.leaderboardrow:hover {transform: scale(1.05); box-shadow: 0px 14px 20px 0 rgba(0, 0, 0, .19); z-index: 5;}
+.leaderboardrow {position: relative; z-index: 1; -webkit-transition: all 0.2s; transition: all 0.2s; z-index: 0; overflow: hidden; }
+.leaderboardrow .rank {position: absolute; top: 0; left: 0; padding: 7px 7px 9px 12px; font-size: 14px; width: 30px; z-index: 1; color: black;}
+.leaderboardrow .rank:before {content: ""; position: absolute; background-color: #3E92CC; width: 185%; height: 300%; top: 0; left: 0; z-index: -1; -webkit-transform: rotate(45deg) translate(-70%, -3%); -moz-transform: rotate(45deg) translate(-70%, -3%); -ms-transform: rotate(45deg) translate(-70%, -3%); -o-transform: rotate(45deg) translate(-70%, -3%); transform: rotate(45deg) translate(-70%, -3%); z-index: -1;}
+.leaderboardrow a {width: 100%; display: flex; flex-wrap: wrap; align-items: center; text-decoration: none; color: black; --bs-gutter-x: 1.5rem; --bs-gutter-y: 0; margin-top: calc(var(--bs-gutter-y) * -1); margin-right: calc(var(--bs-gutter-x) * -.5); margin-left: calc(var(--bs-gutter-x) * -.5);}
+.leaderboardrow a > * {flex-shrink: 0; width: 100%; max-width: 100%; padding-right: calc(var(--bs-gutter-x) * .5); padding-left: calc(var(--bs-gutter-x) * .5); margin-top: var(--bs-gutter-y);}
+.leaderboardrow .profileimage {flex: 0 0 auto; width: 23%;}
+.leaderboardrow .profilename {flex: 0 0 auto; width: 44%;}
+.leaderboardrow .raised {flex: 0 0 auto; width: 23%;}
+.leaderboardrow .options {flex: 0 0 auto; width: 10%;}
+.leaderboard-small .leaderboardrow .profileimage {flex: 0 0 auto; width: 25%;}
+.leaderboard-small .leaderboardrow .profilename {flex: 0 0 auto; width: 50%;}
+.leaderboard-small .leaderboardrow .raised {flex: 0 0 auto; width: 25%;}
+.leaderboardrow .profile-image {width: 100%; border-radius: 50%;}
+.pagination {padding: 10px; margin-top: 10px;}
+.pagination .next-page, .pagination .prev-page {padding: 10px 20px; text-decoration: none; color: black; background-color: #3E92CC; border-radius: 5px; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+.pagination .next-page:hover, .pagination .next-page:active, 
+.pagination .prev-page:hover, .pagination .prev-page:active {background-color: #eee;}
+.leaderboard-small .leaderboardrow .options, 
+[role="clb"].pagination-none .pagination, 
+[role="clb"]:not([clb-loading="true"]) .clb-loader,
+[role="clb"][clb-loading="true"] .clb-result {display: none;}
+[role="clb"] .clb-result {gap: 10px; display: flex; flex-direction: column;}
+.clb-loader {display: flex; height: 700px; justify-content: center; align-items: center;}
+.bg-loader, .bg-loader div {box-sizing: border-box;}
+.bg-loader {display: inline-block; position: relative; margin: auto; width: 80px; height: 80px;}
+.bg-loader div {box-sizing: border-box; display: block; position: absolute; width: 64px; height: 64px; margin: 8px; border: 8px solid lightblue; border-radius: 50%; animation: bg-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite; border-color: lightblue transparent transparent transparent;}
+.bg-loader div:nth-child(1) {animation-delay: -0.45s;}
+.bg-loader div:nth-child(2) {animation-delay: -0.3s;}
+.bg-loader div:nth-child(3) {animation-delay: -0.15s;}
+@keyframes bg-loader {0% {transform: rotate(0deg);}100% {transform: rotate(360deg);}}
+@media only screen and (max-width: 768px) {
+    .leaderboardrow .profileimage {width: 25%;}
+    .leaderboardrow .profilename {width: 50%;}
+    .leaderboardrow .raised {width: 25%;}
+    .leaderboardrow .options {display: none;}
+}
